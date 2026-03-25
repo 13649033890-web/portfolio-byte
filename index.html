@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="八秒土豆丝的个人网站 - 有温度的个人品牌">
+    <title>八秒土豆丝 | 张家琴个人网站</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- 固定背景层 -->
+    <div class="bg-layer" id="bgLayer"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">八秒土豆丝</span>
+            </a>
+            
+            <!-- 桌面端导航 -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#work" class="nav-link" data-section="work">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Work</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#journey" class="nav-link" data-section="journey">
+                        <i class="fas fa-route"></i>
+                        <span>Journey</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#beyond" class="nav-link" data-section="beyond">
+                        <i class="fas fa-heart"></i>
+                        <span>Beyond Resume</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#music" class="nav-link" data-section="music">
+                        <i class="fas fa-music"></i>
+                        <span>Music</span>
+                        <span class="music-badge">请听陈奕迅</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#mode" class="nav-link" data-section="mode">
+                        <i class="fas fa-cog"></i>
+                        <span>Mode</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav-end">
+                <!-- 浅色 / 深色外观切换 -->
+                <div class="nav-theme-switch" id="navThemeSwitch">
+                    <div
+                        class="nav-theme-track"
+                        id="navThemeTrack"
+                        role="switch"
+                        tabindex="0"
+                        aria-checked="true"
+                        aria-label="外观模式，左侧浅色右侧深色"
+                    >
+                        <span class="nav-theme-pane nav-theme-pane--light">
+                            <span class="nav-theme-scene">
+                                <i class="fas fa-cloud nav-theme-cloud nav-theme-cloud--light" aria-hidden="true"></i>
+                                <i class="fas fa-sun nav-theme-sun" aria-hidden="true"></i>
+                            </span>
+                            <span class="nav-theme-label">浅色</span>
+                        </span>
+                        <span class="nav-theme-pane nav-theme-pane--dark">
+                            <span class="nav-theme-scene">
+                                <i class="fas fa-star nav-theme-star" aria-hidden="true"></i>
+                                <i class="fas fa-star nav-theme-star nav-theme-star--2" aria-hidden="true"></i>
+                                <i class="fas fa-cloud nav-theme-cloud nav-theme-cloud--dark" aria-hidden="true"></i>
+                                <i class="fas fa-moon nav-theme-moon" aria-hidden="true"></i>
+                            </span>
+                            <span class="nav-theme-label">深色</span>
+                        </span>
+                        <span class="nav-theme-thumb" id="navThemeThumb" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+                <!-- 汉堡菜单按钮 -->
+                <button class="hamburger" id="hamburger" aria-label="菜单">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="#home" class="mobile-nav-link"><i class="fas fa-home"></i>首页</a></li>
+            <li><a href="#work" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Work</a></li>
+            <li><a href="#journey" class="mobile-nav-link"><i class="fas fa-route"></i>Journey</a></li>
+            <li><a href="#beyond" class="mobile-nav-link"><i class="fas fa-heart"></i>Beyond Resume</a></li>
+            <li><a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+            <li><a href="#music" class="mobile-nav-link"><i class="fas fa-music"></i>Music<span class="music-badge">请听陈奕迅</span></a></li>
+            <li><a href="#mode" class="mobile-nav-link"><i class="fas fa-cog"></i>Mode</a></li>
+        </ul>
+    </div>
+    
+    <!-- 主内容区 -->
+    <main class="main-content">
+        
+        <!-- ==================== 首页 Home ==================== -->
+        <section class="section section-home" id="home">
+            <div class="container">
+                <div class="home-wrapper">
+                    <!-- 左侧文案区 -->
+                    <div class="home-content">
+                        <div class="home-intro">
+                            <h1 class="home-title">
+                                <span class="greeting">Hi!</span>
+                                <span class="name">我是张家琴</span>
+                            </h1>
+                            <h2 class="home-subtitle">
+                                我喜欢理解人，也喜欢把复杂事情做成。
+                            </h2>
+                            <p class="home-description">
+                                我喜欢变化，习惯在热闹中观察人，在变化里快速判断。<br>
+                                我热爱运动，喜欢打篮球，也喜欢hiphop。<br>
+                                我喜欢刺激，例如蹦极以及还没能尝试的跳伞。
+                            </p>
+                        </div>
+                        
+                        <!-- 个性标签 -->
+                        <div class="personality-tags">
+                            <span class="tag">#表达力</span>
+                            <span class="tag">#行动力</span>
+                            <span class="tag">#结构感</span>
+                            <span class="tag">#数据优先</span>
+                            <span class="tag">#街舞</span>
+                            <span class="tag">#篮球</span>
+                            <span class="tag">#未知性</span>
+                            <span class="tag">#保持好奇心</span>
+                        </div>
+                        
+                        <!-- CTA 按钮 -->
+                        <div class="home-cta">
+                            <a href="#work" class="btn btn-primary">
+                                <span>看看我的过往实习经历</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#beyond" class="btn btn-secondary">
+                                <span>更多关于我</span>
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧形象区 -->
+                    <div class="home-visual">
+                        <div class="avatar-container">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-wrapper">
+                                <img src="assets/avatar.jpg" alt="八秒土豆丝" class="avatar-img" id="avatarImg">
+                                <div class="avatar-placeholder" id="avatarPlaceholder">
+                                    <i class="fas fa-user"></i>
+                                    <span>头像占位</span>
+                                </div>
+                            </div>
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="home-visual-caption">
+                            <span class="caption-dot"></span>
+                            <span>Product Thinker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 向下滚动提示 -->
+                <div class="scroll-hint" id="scrollHint">
+                    <span class="scroll-text">向下滚动探索</span>
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== Work 页面 ==================== -->
+        <section class="section section-work" id="work">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Work</h2>
+                    <p class="section-subtitle">我做过什么，我会什么</p>
+                </div>
+                
+                <!-- 精选案例 -->
+                <div class="work-section">
+                    <h3 class="subsection-title">
+                        <i class="fas fa-star"></i>
+                        <span>精选案例</span>
+                    </h3>
+                    <div class="cases-grid" id="casesGrid">
+                        <!-- 案例卡片将通过 JS 动态生成 -->
+                    </div>
+                </div>
+                
+                <!-- 个人技能 -->
+                <div class="work-section skills-section">
+                    <div class="skills-header">
+                        <div class="skills-header-line"></div>
+                        <div class="skills-header-content">
+                            <i class="fas fa-flag skills-flag-icon"></i>
+                            <span class="skills-title" id="skillsTitle">个人技能</span>
+                        </div>
+                    </div>
+                    <div class="skills-categories" id="skillsCategories">
+                        <!-- 分类框将通过 JS 动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== Journey 页面 ==================== -->
+        <section class="section section-journey" id="journey">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Journey</h2>
+                    <p class="section-subtitle">一条完整的成长时间线</p>
+                </div>
+                
+                <div class="timeline" id="timeline">
+                    <!-- 时间线节点将通过 JS 动态生成 -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== Beyond Resume 页面 ==================== -->
+        <section class="section section-beyond" id="beyond">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Beyond Resume</h2>
+                    <p class="section-subtitle">简历之外，生活的塑造</p>
+                </div>
+                
+                <!-- 总述文案 -->
+                <div class="beyond-intro">
+                    <blockquote class="beyond-quote">
+                        "我喜欢真实的场景，也喜欢真实的人。无论是个人亦或工作，我希望我能定义并解决正确的问题，从而为当下主体带来可量化的增长。"
+                    </blockquote>
+                </div>
+                
+                <!-- Beyond 卡片 -->
+                <div class="beyond-grid" id="beyondGrid">
+                    <!-- Beyond 卡片将通过 JS 动态生成 -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== Contact 页面 ==================== -->
+        <section class="section section-contact" id="contact">
+            <div class="container">
+                <div class="contact-hero">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar-container contact-page-avatar">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-wrapper">
+                                <img src="assets/avatar.jpg" alt="八秒土豆丝" class="avatar-img" id="avatarImgContact">
+                                <div class="avatar-placeholder" id="avatarPlaceholderContact">
+                                    <i class="fas fa-user"></i>
+                                    <span>头像</span>
+                                </div>
+                            </div>
+                            <div class="avatar-glow"></div>
+                        </div>
+                    </div>
+                    <h2 class="contact-title-cn">联系我</h2>
+                    <div class="contact-title-line" aria-hidden="true"></div>
+                    <p class="contact-intro">如果您想与我交流，可以通过以下方式联系我。</p>
+                    <div class="contact-pill-row">
+                        <button type="button" class="contact-pill-btn" id="openContactEmailBtn" aria-haspopup="dialog">
+                            <i class="fas fa-envelope"></i>
+                            <span>发送邮件</span>
+                        </button>
+                        <button type="button" class="contact-pill-btn" id="openContactPhoneBtn" aria-haspopup="dialog">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>电话号码</span>
+                        </button>
+                        <button type="button" class="contact-pill-btn" id="openContactWechatBtn" aria-haspopup="dialog">
+                            <i class="fab fa-weixin"></i>
+                            <span>微信</span>
+                        </button>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="assets/resume_zj.pdf" class="btn btn-primary contact-download-btn" id="downloadResumeBtn" download>
+                            <i class="fas fa-download"></i>
+                            <span>下载简历</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== Music 页面 ==================== -->
+        <section class="section section-music" id="music">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Music</h2>
+                    <p class="section-subtitle">我最爱的歌</p>
+                </div>
+
+                <div class="music-center-stage">
+                    <!-- 大唱片转盘 -->
+                    <div class="vinyl-disc" id="vinylDisc">
+                        <div class="vinyl-center">
+                            <div class="vinyl-label">
+                                <i class="fas fa-music"></i>
+                            </div>
+                        </div>
+                        <div class="vinyl-grooves"></div>
+                    </div>
+
+                    <!-- 歌曲信息 -->
+                    <div class="track-reveal" id="trackReveal">
+                        <h3 class="track-title-main" id="trackNameMain">葡萄成熟时</h3>
+                        <p class="track-artist-main" id="artistNameMain">陈奕迅</p>
+                    </div>
+
+                    <!-- 歌词区 -->
+                    <div class="lyric-quote" id="lyricQuote">
+                        <p>「问到何时葡萄先熟透 / 你要静候再静候 / 就算失收始终要守」</p>
+                    </div>
+                    <!-- 进度条 -->
+                    <div class="stage-progress" id="stageProgress">
+                        <div class="stage-progress-bar" id="progressBar">
+                            <div class="stage-progress-fill" id="progress"></div>
+                            <div class="stage-progress-thumb" id="progressHandle"></div>
+                        </div>
+                        <div class="stage-time-row">
+                            <span class="stage-time" id="currentTime">0:00</span>
+                            <span class="stage-time stage-time--end" id="duration">4:23</span>
+                        </div>
+                    </div>
+
+                    <!-- 控制按钮 -->
+                    <div class="stage-controls" id="stageControls">
+                        <button class="stage-btn stage-btn--sm" id="prevBtn" title="重新播放">
+                            <i class="fas fa-backward-step"></i>
+                        </button>
+                        <button class="stage-btn stage-btn--play" id="playBtn" title="播放">
+                            <i class="fas fa-play" id="playIcon"></i>
+                        </button>
+                        <button class="stage-btn stage-btn--sm" id="nextBtn" title="重新播放">
+                            <i class="fas fa-forward-step"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 音频隐藏元素 -->
+                <audio id="audioPlayer" preload="metadata"></audio>
+            </div>
+        </section>
+        
+        <!-- ==================== Mode 页面 ==================== -->
+        <section class="section section-mode" id="mode">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mode</h2>
+                    <p class="section-subtitle">定制你的浏览体验</p>
+                </div>
+                
+                <div class="mode-wrapper">
+                    <!-- 主题模式卡片 -->
+                    <div class="mode-cards">
+                        <div class="mode-card" id="dayModeCard" data-mode="day">
+                            <div class="mode-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <h4>Day 模式</h4>
+                            <p>清爽 / 通透 / 自然</p>
+                            <div class="mode-status" id="dayStatus">
+                                <span class="status-indicator active"></span>
+                                <span class="status-text">当前使用</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mode-card" id="nightModeCard" data-mode="night">
+                            <div class="mode-icon">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <h4>Night 模式</h4>
+                            <p>安静 / 专注 / 情绪</p>
+                            <div class="mode-status" id="nightStatus">
+                                <span class="status-indicator"></span>
+                                <span class="status-text">点击切换</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 设置选项 -->
+                    <div class="mode-settings">
+                        <h4>设置选项</h4>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <i class="fas fa-music"></i>
+                                <span>背景音乐</span>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="musicToggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <i class="fas fa-magic"></i>
+                                <span>动画效果</span>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="motionToggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <i class="fas fa-image"></i>
+                                <span>背景风格</span>
+                            </div>
+                            <div class="style-options">
+                                <button class="style-btn active" data-style="soft">Soft</button>
+                                <button class="style-btn" data-style="clean">Clean</button>
+                                <button class="style-btn" data-style="minimal">Minimal</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ==================== 页脚 Footer ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-tagline">Made with clarity, rhythm and curiosity.</p>
+                <p class="footer-credit">八秒土豆丝 · 2026</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" title="小红书">
+                        <i class="fas fa-book-open"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" title="即刻">
+                        <i class="fas fa-bolt"></i>
+                    </a>
+                </div>
+                <p class="footer-copy">All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ==================== 模态框 ==================== -->
+    <!-- 案例详情模态框 -->
+    <div class="modal" id="caseModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="caseModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="caseModalContent">
+                <!-- 案例详情内容将通过 JS 动态填充 -->
+            </div>
+            <div class="modal-nav">
+                <button class="modal-nav-btn" id="prevCaseBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>上一个案例</span>
+                </button>
+                <button class="modal-nav-btn" id="nextCaseBtn">
+                    <span>下一个案例</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact：邮箱弹窗 -->
+    <div class="modal contact-info-modal" id="contactEmailModal" role="dialog" aria-modal="true" aria-labelledby="contactEmailModalTitle" aria-hidden="true">
+        <div class="modal-overlay" data-close-contact-modal></div>
+        <div class="modal-container modal-sm">
+            <button type="button" class="modal-close" id="contactEmailModalClose" aria-label="关闭">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content contact-modal-inner">
+                <h4 class="contact-modal-title" id="contactEmailModalTitle">发送邮件</h4>
+                <p class="contact-modal-value" id="modalEmailValue">13649033890@163.com</p>
+                <button type="button" class="btn contact-modal-copy" id="modalCopyEmailBtn">一键复制</button>
+            </div>
+        </div>
+    </div>
+    <!-- Contact：电话弹窗 -->
+    <div class="modal contact-info-modal" id="contactPhoneModal" role="dialog" aria-modal="true" aria-labelledby="contactPhoneModalTitle" aria-hidden="true">
+        <div class="modal-overlay" data-close-contact-modal></div>
+        <div class="modal-container modal-sm">
+            <button type="button" class="modal-close" id="contactPhoneModalClose" aria-label="关闭">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content contact-modal-inner">
+                <h4 class="contact-modal-title" id="contactPhoneModalTitle">电话号码</h4>
+                <p class="contact-modal-value" id="modalPhoneValue">13649033890</p>
+                <button type="button" class="btn contact-modal-copy" id="modalCopyPhoneBtn">一键复制</button>
+            </div>
+        </div>
+    </div>
+    <!-- Contact：微信弹窗 -->
+    <div class="modal contact-info-modal" id="contactWechatModal" role="dialog" aria-modal="true" aria-labelledby="contactWechatModalTitle" aria-hidden="true">
+        <div class="modal-overlay" data-close-contact-modal></div>
+        <div class="modal-container modal-sm">
+            <button type="button" class="modal-close" id="contactWechatModalClose" aria-label="关闭">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content contact-modal-inner">
+                <h4 class="contact-modal-title" id="contactWechatModalTitle">添加微信</h4>
+                <div class="contact-modal-qr-wrap">
+                    <img src="assets/qr-wechat.png.jpg" alt="微信二维码" class="wechat-qr-img wechat-qr-img--modal">
+                </div>
+                <p class="contact-modal-hint">请使用微信扫描二维码</p>
+                <button type="button" class="btn contact-modal-copy" id="modalCopyWechatBtn">一键复制手机号</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast 提示 -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span class="toast-message" id="toastMessage">操作成功</span>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
